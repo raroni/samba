@@ -2,9 +2,9 @@ part of samba;
 
 class ShaderProgramManager {
   Map<String, ShaderProgram> map;
-  web_gl.RenderingContext _context;
+  WebGL.RenderingContext _context;
   
-  ShaderProgramManager(web_gl.RenderingContext context) {
+  ShaderProgramManager(WebGL.RenderingContext context) {
     _context = context;
     map = new Map();
   }

@@ -1,5 +1,5 @@
 part of samba;
 
-class Component {
-  
+abstract class Component {
+  void update(num timeDelta);
 }

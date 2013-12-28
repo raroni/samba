@@ -7,7 +7,7 @@ abstract class Game {
   final SceneSequencer sequencer = new SceneSequencer();
   num _lastTickAt = 0;
   
-  Game(html.CanvasElement canvas) : renderer = new Renderer(canvas) {
+  Game(HTML.CanvasElement canvas) : renderer = new Renderer(canvas) {
     sequencer.components = components;
     director = createDirector();
     director.game = this;
@@ -32,7 +32,7 @@ abstract class Game {
   void loop(num time) {
     var timeDelta = time - _lastTickAt;
     tick(timeDelta);
-    html.window.animationFrame.then(loop);
+    HTML.window.animationFrame.then(loop);
     _lastTickAt = time;
   }
 }

@@ -1,10 +1,10 @@
 part of samba;
 
 class Renderer {
-  web_gl.RenderingContext _context;
+  WebGL.RenderingContext _context;
   ShaderProgramManager programs;
   
-  Renderer(html.CanvasElement canvas) {
+  Renderer(HTML.CanvasElement canvas) {
     _context = canvas.getContext("webgl");
     programs = new ShaderProgramManager(_context);
   }
