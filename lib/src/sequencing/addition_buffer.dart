@@ -46,6 +46,7 @@ class AdditionBuffer {
   void commit() {
     for(ComponentAddition addition in componentAdditions) {
       addition.node.addComponentNow(addition.component);
+      onComponentAttached(addition.component);
     }
     componentAdditions.clear();
     

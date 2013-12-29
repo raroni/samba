@@ -3,6 +3,7 @@ library samba;
 import 'dart:html' as HTML;
 import 'dart:web_gl' as WebGL;
 import 'dart:async' as Async;
+import 'dart:collection' as Collection;
 
 part "src/game.dart";
 
@@ -17,6 +18,11 @@ part "src/sequencing/sequencer.dart";
 part "src/sequencing/addition_buffer.dart";
 part "src/sequencing/registration_buffer.dart";
 part "src/sequencing/setup_buffer.dart";
+
+part "src/projection/lens.dart";
+part "src/projection/perspective_lens.dart";
+part "src/projection/lens_depth_sorting.dart";
+part "src/projection/lens_manager.dart";
 
 part "src/components/component.dart";
 part "src/components/component_registry.dart";

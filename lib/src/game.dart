@@ -3,6 +3,7 @@ part of samba;
 abstract class Game {
   final Renderer renderer;
   Director director;
+  final LensManager lensManager = new LensManager();
   final ComponentRegistry components = new ComponentRegistry();
   final Sequencer sequencer = new Sequencer();
   num _lastTickAt = 0;
@@ -16,8 +17,10 @@ abstract class Game {
   Director createDirector();
   
   void initialize() {
-    director.initialize();
     sequencer.initialize();
+    lensManager.initialize(components.lenses);
+    director.initialize();
+    renderer.lensManager = lensManager;
     onInitialize();
   }
   

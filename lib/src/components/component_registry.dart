@@ -3,9 +3,11 @@ part of samba;
 class ComponentRegistry extends Object with Notifier {
   final List<Component> components = new List<Component>();
   final ComponentTypeRegistry<Layer> layers = new ComponentTypeRegistry<Layer>();
+  final ComponentTypeRegistry<Lens> lenses = new ComponentTypeRegistry<Lens>();
   
   ComponentRegistry() {
     layers.initialize(this);
+    lenses.initialize(this);
   }
   
   void add(Component component) {
