@@ -16,6 +16,7 @@ class AdditionBuffer {
   List<ComponentAddition> componentAdditions = new List<ComponentAddition>();
   List<ChildAddition> childAdditions = new List<ChildAddition>();
   RegistrationBuffer registrations;
+  SetupBuffer setups;
   
   void scheduleComponent(Component component, Node node) {
     var addition = new ComponentAddition(component, node);
@@ -38,7 +39,7 @@ class AdditionBuffer {
   }
   
   void onComponentAttached(Component component) {
-    //setups.schedule(component);
+    setups.schedule(component);
     registrations.schedule(component);
   }
   

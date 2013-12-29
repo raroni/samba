@@ -16,6 +16,7 @@ part "src/scene/entity.dart";
 part "src/sequencing/sequencer.dart";
 part "src/sequencing/addition_buffer.dart";
 part "src/sequencing/registration_buffer.dart";
+part "src/sequencing/setup_buffer.dart";
 
 part "src/components/component.dart";
 part "src/components/component_registry.dart";

@@ -4,9 +4,11 @@ class Sequencer {
   ComponentRegistry components;
   final AdditionBuffer additions = new AdditionBuffer();
   final RegistrationBuffer registrations = new RegistrationBuffer();
+  final SetupBuffer setups = new SetupBuffer();
   
   void initialize() {
     additions.registrations = registrations;
+    additions.setups = setups;
     registrations.components = components;
   }
   
@@ -20,6 +22,7 @@ class Sequencer {
   
   void grow() {
     additions.commit();
+    setups.commit();
     registrations.commit();
   }
   
