@@ -6,10 +6,6 @@ import 'dart:async' as Async;
 
 part "src/game.dart";
 
-part "src/rendering/renderer.dart";
-part "src/rendering/shader_program.dart";
-part "src/rendering/shader_program_manager.dart";
-
 part "src/scene/scene.dart";
 part "src/scene/node.dart";
 part "src/scene/scene_sequencer.dart";
@@ -19,8 +15,14 @@ part "src/scene/component_registry.dart";
 part "src/scene/component_event.dart";
 part "src/scene/group_mask.dart";
 part "src/scene/group_mask_registry.dart";
+part "src/scene/component_type_registry.dart";
 
 part "src/events/event.dart";
 part "src/events/subscription.dart";
 part "src/events/subscriber.dart";
 part "src/events/notifier.dart";
+
+part "src/rendering/renderer.dart";
+part "src/rendering/shader_program.dart";
+part "src/rendering/shader_program_manager.dart";
+part "src/rendering/layer.dart";
