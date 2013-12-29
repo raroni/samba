@@ -5,7 +5,7 @@ abstract class Node {
   List<Component> components = new List<Component>();
   List<Entity> children = new List<Entity>();
   
-  SceneSequencer get sequencer;
+  Sequencer get sequencer;
   
   void addChild(Entity child) {
     if(sequencer != null)

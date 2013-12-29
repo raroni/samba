@@ -4,7 +4,7 @@ abstract class Scene extends Node {
   Game game;
   bool completed = false;
   
-  SceneSequencer get sequencer {
+  Sequencer get sequencer {
     if(game == null) return null;
     return game.sequencer;
   }

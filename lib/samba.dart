@@ -8,12 +8,13 @@ part "src/game.dart";
 
 part "src/scene/scene.dart";
 part "src/scene/node.dart";
-part "src/scene/scene_sequencer.dart";
 part "src/scene/director.dart";
 part "src/scene/group_mask.dart";
 part "src/scene/group_mask_registry.dart";
 part "src/scene/entity.dart";
-part "src/scene/addition_buffer.dart";
+
+part "src/sequencing/sequencer.dart";
+part "src/sequencing/addition_buffer.dart";
 
 part "src/components/component.dart";
 part "src/components/component_registry.dart";

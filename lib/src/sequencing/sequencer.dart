@@ -1,6 +1,6 @@
 part of samba;
 
-class SceneSequencer {
+class Sequencer {
   ComponentRegistry components;
   AdditionBuffer additions = new AdditionBuffer();
   

@@ -4,7 +4,7 @@ abstract class Game {
   final Renderer renderer;
   Director director;
   final ComponentRegistry components = new ComponentRegistry();
-  final SceneSequencer sequencer = new SceneSequencer();
+  final Sequencer sequencer = new Sequencer();
   num _lastTickAt = 0;
   
   Game(HTML.CanvasElement canvas) : renderer = new Renderer(canvas) {
