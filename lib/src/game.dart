@@ -17,7 +17,10 @@ abstract class Game {
   
   void initialize() {
     director.initialize();
+    onInitialize();
   }
+  
+  void onInitialize();
   
   void run() {
     loop(0);
