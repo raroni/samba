@@ -28,7 +28,9 @@ abstract class Game {
   
   void tick(num timeDelta) {
     director.update();
+    sequencer.grow();
     components.update(timeDelta);
+    sequencer.trim();
     renderer.draw();
   }
   

@@ -17,6 +17,7 @@ part "src/scene/group_mask.dart";
 part "src/scene/group_mask_registry.dart";
 part "src/scene/component_type_registry.dart";
 part "src/scene/entity.dart";
+part "src/scene/addition_buffer.dart";
 
 part "src/events/event.dart";
 part "src/events/subscription.dart";
