@@ -15,6 +15,7 @@ class ChildAddition {
 class AdditionBuffer {
   List<ComponentAddition> componentAdditions = new List<ComponentAddition>();
   List<ChildAddition> childAdditions = new List<ChildAddition>();
+  RegistrationBuffer registrations;
   
   void scheduleComponent(Component component, Node node) {
     var addition = new ComponentAddition(component, node);
@@ -26,6 +27,21 @@ class AdditionBuffer {
     childAdditions.add(addition);
   }
   
+  void onChildAttached(Entity child) {
+    for(Component component in child.components) {
+      onComponentAttached(component);
+    }
+    
+    for(Entity grandChild in child.children) {
+      onChildAttached(grandChild);
+    }
+  }
+  
+  void onComponentAttached(Component component) {
+    //setups.schedule(component);
+    registrations.schedule(component);
+  }
+  
   void commit() {
     for(ComponentAddition addition in componentAdditions) {
       addition.node.addComponentNow(addition.component);
@@ -34,6 +50,7 @@ class AdditionBuffer {
     
     for(ChildAddition addition in childAdditions) {
       addition.parent.addChildNow(addition.child);
+      onChildAttached(addition.child);
     }
     childAdditions.clear();
   }

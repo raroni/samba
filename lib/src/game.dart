@@ -17,6 +17,7 @@ abstract class Game {
   
   void initialize() {
     director.initialize();
+    sequencer.initialize();
     onInitialize();
   }
   

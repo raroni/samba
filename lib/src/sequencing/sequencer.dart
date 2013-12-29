@@ -2,7 +2,13 @@ part of samba;
 
 class Sequencer {
   ComponentRegistry components;
-  AdditionBuffer additions = new AdditionBuffer();
+  final AdditionBuffer additions = new AdditionBuffer();
+  final RegistrationBuffer registrations = new RegistrationBuffer();
+  
+  void initialize() {
+    additions.registrations = registrations;
+    registrations.components = components;
+  }
   
   void scheduleComponentAddition(Component component, Node node) {
     additions.scheduleComponent(component, node);
@@ -14,6 +20,7 @@ class Sequencer {
   
   void grow() {
     additions.commit();
+    registrations.commit();
   }
   
   void trim() {
