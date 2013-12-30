@@ -7,6 +7,7 @@ abstract class Game {
   final ComponentRegistry components = new ComponentRegistry();
   final Sequencer sequencer = new Sequencer();
   num _lastTickAt = 0;
+  final MeshRegistry meshes = new MeshRegistry();
   
   Game(HTML.CanvasElement canvas) : renderer = new Renderer(canvas) {
     sequencer.components = components;
